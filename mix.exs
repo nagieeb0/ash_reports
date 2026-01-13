@@ -109,9 +109,9 @@ defmodule AshReports.MixProject do
       description: "Comprehensive reporting extension for Ash Framework",
       licenses: ["MIT"],
       links: %{
-        "GitHub" => "https://github.com/your-org/ash_reports"
+        "GitHub" => "https://github.com/accountex-org/ash_reports"
       },
-      maintainers: ["Your Name"]
+      maintainers: ["pcharbon70"]
     ]
   end
 

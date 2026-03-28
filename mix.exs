@@ -61,7 +61,7 @@ defmodule AshReports.MixProject do
       {:gettext, "~> 0.24"},
 
       # Optional dependencies
-      {:phoenix_live_view, "~> 0.20", optional: true},
+      {:phoenix_live_view, "~> 1.1.0", optional: true},
 
       # Development and test dependencies
       {:sourceror, "~> 1.8", only: [:dev, :test], runtime: false},

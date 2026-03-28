@@ -58,7 +58,7 @@ defmodule AshReports.MixProject do
       {:ex_cldr_calendars, "~> 1.26"},
 
       # Translation dependencies
-      {:gettext, "~> 0.24"},
+      {:gettext, "~> 1.0"},
 
       # Optional dependencies
       {:phoenix_live_view, "~> 1.1.0", optional: true},

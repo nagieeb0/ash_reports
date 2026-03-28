@@ -79,7 +79,7 @@ defmodule AshReports.MixProject do
       # Chart generation dependencies (Stage 3)
       {:contex, "~> 0.5.0"},
       {:statistics, "~> 0.6.3"},
-      {:timex, "~> 3.7"},
+      {:timex, "~> 3.7.11"},
 
       # Phase 5.1 - Interactive Data Visualization dependencies
       {:jason, "~> 1.4"},

@@ -44,28 +44,28 @@ defmodule AshReports.MixProject do
   defp elixirc_paths(_), do: ["lib"]
 
   # Run "mix help deps" to learn about dependencies.
-  defp deps do
+defp deps do
     [
       # Core dependencies
       {:ash, "~> 3.0"},
       {:spark, "~> 2.2"},
 
-      # CLDR dependencies for internationalization
-      {:ex_cldr, "~> 2.40"},
-      {:ex_cldr_numbers, "~> 2.33"},
-      {:ex_cldr_dates_times, "~> 2.20"},
-      {:ex_cldr_currencies, "~> 2.16"},
-      {:ex_cldr_calendars, "~> 1.26"},
+      # CLDR dependencies - جعلنا الإصدارات أكثر مرونة
+      {:ex_cldr, "~> 2.0"},
+      {:ex_cldr_numbers, "~> 2.0"},
+      {:ex_cldr_dates_times, "~> 2.0"},
+      {:ex_cldr_currencies, "~> 2.0"},
+      {:ex_cldr_calendars, "~> 1.0"},
 
-      # Translation dependencies
-      {:gettext, "~> 1.0"},
+      # Translation dependencies - تعديل جوهري لحل مشكلة التضارب
+      {:gettext, ">= 0.20.0"}, 
 
       # Optional dependencies
-      {:phoenix_live_view, "~> 1.1.0", optional: true},
+      {:phoenix_live_view, "~> 1.0", optional: true},
 
       # Development and test dependencies
       {:sourceror, "~> 1.8", only: [:dev, :test], runtime: false},
-      {:igniter, "~> 0.5", only: [:dev, :test]},
+      {:igniter, "~> 0.5 or ~> 0.6", only: [:dev, :test]}, # توافق مع إصدار مشروعك 0.6
       {:ex_doc, "~> 0.34", only: :dev, runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
@@ -76,13 +76,13 @@ defmodule AshReports.MixProject do
       {:typst, "~> 0.1.7"},
       {:file_system, "~> 1.0", only: [:dev, :test]},
 
-      # Chart generation dependencies (Stage 3)
+      # Chart generation dependencies - تحديث Timex ليقبل Gettext 1.0
       {:contex, "~> 0.5.0"},
       {:statistics, "~> 0.6.3"},
-      {:timex, "~> 3.7.11"},
+      {:timex, "~> 3.7"}, 
 
       # Phase 5.1 - Interactive Data Visualization dependencies
-      {:jason, "~> 1.4"},
+      {:jason, "~> 1.2"},
 
       # Test dependencies
       {:mox, "~> 1.1", only: :test},
@@ -94,7 +94,6 @@ defmodule AshReports.MixProject do
       {:phoenix_test, "~> 0.7.1", only: :test, runtime: false}
     ]
   end
-
   defp aliases do
     [
       setup: ["deps.get", "compile"],
